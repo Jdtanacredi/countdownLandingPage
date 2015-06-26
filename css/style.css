@@ -1,0 +1,136 @@
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*FONT STYLING START*/
+@font-face {
+  font-family: 'ITC-extra-light';
+  src: url('../fonts/ITCAvantGardeStd-XLt.otf'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'ITC-standard';
+  src: url('../fonts/ITCAvanteGardeStd-Bk.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'ITC-medium';
+  src: url('../fonts/ITCAvantGardeStd-Md.otf'); /* IE9 Compat Modes */
+}
+/*FONT STYLING END*/
+
+.color-1 {background-color: #edc7d1;}
+.color-2 {background-color: #e3bcc7;}
+.color-3 {background-color: #dcadbb;}
+.color-4 {background-color: #d190a2;}
+.color-5 {background-color: #c97f94;}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'ITC-extra-light';
+}
+
+/*HEADER STYLING START*/
+header {background: url('../images/header.jpg');}
+header h1 {
+	text-transform: uppercase;
+	font-size: 3.6em;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin: 0;
+  padding: 45px 0 30px;
+}
+
+header h4 {
+	width: 648px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+header h3:first-of-type {
+	margin: 10px;
+}
+header h3:last-of-type {
+	margin: 0;
+	padding: 20px 0 40px;
+}
+header span {
+	color: #b56f7e;
+	font-family: 'ITC-medium';
+}
+/*HEADER STYLING END*/
+
+
+.grid {margin: 0 auto;}
+
+
+/****** FLIP ANIMATION START ******/
+.grid-item {width: 316px;}
+.grid-item,.grid-item-long {
+	perspective:1000;
+	cursor: pointer;
+	float: left;
+	height: 200px;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.grid-item.active,
+.grid-item-long.active {
+	transform: rotateY(180deg);
+}
+.front, .back {
+	backface-visibility: hidden;
+	width: 316px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {z-index: 2;transform: rotateY(0deg);}
+.back {transform: rotateY(180deg);}
+/*******  FLIP ANIMATION END  ********/
+
+
+
+.grid-item-long {width: 474px; }
+.grid-item-long .front,.grid-item-long .back {width: 474px;}
+.grid-item h1 {
+	font-size: 100px; 
+	font-weight: 100; 
+	margin: 0px; 
+} 
+.grid-item .content {
+	color: #fff; 
+	padding-top: 40px;
+}
+.content h2 {
+	font-size: 1em;
+  width: 224px;
+  margin: 25px auto;
+}
+
+
+/****** CSS WOBBLE ANIMATION START ******/
+@-webkit-keyframes wobble  {
+  0%  { -webkit-transform:  rotate(0deg); }
+  25%  { -webkit-transform:  rotate(1deg); }
+  50%  { -webkit-transform:  rotate(-1deg); }
+  75%  { -webkit-transform:  rotate(1deg); }
+  100%  { -webkit-transform:  rotate(0deg); }
+}
+.wobble { -webkit-animation: wobble .35s; }
+/******* CSS WOBBLE ANIMATION END ******/
+
+/*GRID ITEM BACKGROUNDS START*/
+.grid-item:nth-of-type(1) .back {background: url('../images/square1.jpg');}
+.grid-item:nth-of-type(1) .back h2 {color: #000;}
+/****** GRID ITEM BACKGROUNDS END *******/
