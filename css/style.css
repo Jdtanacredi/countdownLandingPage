@@ -136,7 +136,7 @@ header span {
 .grid-item:nth-of-type(1) .back h2 {color: #000;}
 /****** GRID ITEM BACKGROUNDS END *******/
 
-@media only screen and (max-width: 975px) {
+@media handheld, screen and (max-width: 975px) {
 	body {font-size: 12px;}
 	header h4 {width: 80%;}
 	.wrapper {width: 100%;}
