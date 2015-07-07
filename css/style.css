@@ -73,7 +73,7 @@ header span {
 
 
 /****** FLIP ANIMATION START ******/
-.grid-item {width: 316px;}
+.grid-item {width: 320px;}
 .grid-item,.grid-item-long {
 	perspective:1000;
 	cursor: pointer;
@@ -101,7 +101,7 @@ header span {
 
 
 
-.grid-item-long {width: 474px; }
+.grid-item-long {width: 480px; }
 .grid-item-long .front,.grid-item-long .back {width: 474px;}
 .grid-item h1 {
 	font-size: 100px; 
