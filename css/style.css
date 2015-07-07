@@ -138,6 +138,7 @@ header span {
 
 @media only screen and (max-width: 975px) {
 	body {font-size: 12px;}
+	header h4 {width: 80%;}
 	.wrapper {width: 100%;}
 	.grid-item, .grid-item-long {width: 50%;}
 	.front,.back {width: 100%;}
